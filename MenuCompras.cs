@@ -1,13 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TareaGrupalPrograS4
 {
     internal class MenuCompras
     {
+
+        //private List<Producto> productosDisponiblesEnLaTienda;
+        //private CarritoDeCompras carrito;
+
         bool continuarMenu = true, seguirAñadiendo = true, seguirFinalizando=true;
 
+        //public  MenuCompras()
+        //{
+        //    carrito = new CarritoDeCompras();
+        //    productosDisponibles = new List<Producto>;
+
+        //    new ProductoTela("Bolsa", "Rojo", 25.99f, "Algodón", "Mediano");
+        //    new ProductoTela("Tapete", "Azul", 35.50f, "Lana", "Grande");
+        //    new ProductoArcilla("Vasija", "Marrón", 50.00f, "Pequeño", 2.5);
+        //    new ProductoArcilla("Estatuilla", "Negro", 75.00f, "Mediano", 4.0);
+
+        //}
         public void EjecutarMenuCompras()
         {
+
+            
+
 
             while (continuarMenu)
             {
@@ -43,13 +62,17 @@ namespace TareaGrupalPrograS4
             {
 
                 Console.WriteLine("A continuacion, se le mostrara la lista de productos del inventario de la tienda");
-                Console.WriteLine(); // referenciar el metodo que muestra la lista de productos del inventario de la tienda
-          
-                Console.WriteLine("Elija el producto que desea añadir al carrito");
+                //for (int i = 0; i < productosDisponibles.Count; i++)
+                //{
+                //  Console.WriteLine($"{i + 1}. {productosDisponibles[i].ObtenerNombre()}");
+                //}
+
+
+                    Console.WriteLine("Elija el producto que desea añadir al carrito");
 
                 string entradaNumeroDeLaLista = Console.ReadLine();
 
-                if (int.TryParse(entradaNumeroDeLaLista, out int NumeroDeLaLista))// && NumeroDeLaLista <= length de la lista)
+                if (int.TryParse(entradaNumeroDeLaLista, out int NumeroDeLaLista))// && NumeroDeLaLista <= productosDisponiblesEnLaTienda.Count)
                 {
                     Console.WriteLine("El producto elegido cuenta con las siguientes caracteristicas");
                     // Metodo que retorna las caracteristicas del producto en un Console.Writeline
@@ -63,7 +86,7 @@ namespace TareaGrupalPrograS4
                         switch (opcion)
                         {
                             case 1:
-                                //Metodo que añade producto de la lista al carrito de compras
+                                //carrito.AgregarProductoPorIndice(productosDisponiblesEnLaTienda, indice - 1); 
                                 Console.WriteLine("Producto añadido al carrito de compras");
                                 Console.WriteLine("¿Desea continuar agregando productos al carrito compras?");
                                 Console.WriteLine("1.Si");
@@ -93,7 +116,11 @@ namespace TareaGrupalPrograS4
         {
 
             Console.WriteLine("A continuacion, la lista de los productos guardados en su carrito de compras");
-            //metodo que retorne la lista de los nombres de los productos del carrito
+            //for (int i = 0; i < productosDisponibles.Count; i++)
+            //{
+            //    Console.WriteLine($"{i + 1}. {productosDisponiblesEnLaTienda[i].ObtenerNombre()}");
+            //}
+
         }
 
         void FinalizarCompra()
